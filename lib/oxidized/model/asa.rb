@@ -56,7 +56,7 @@ class ASA < Oxidized::Model
   end
   
   def single_context
-      # Single context mode
+      # Single context mode 
       cmd 'more system:running-config' do |cfg|
         cfg = cfg.each_line.to_a[3..-1].join
         cfg.gsub! /^: [^\n]*\n/, ''
